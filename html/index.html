@@ -607,8 +607,8 @@
 							</div>
 						</div>
 						<div class="itemList">
-							<itemTemplate v-for="(item) in getShowedItems" :key="index">
-								<div class="itemBox" @click="this.general.selectedItemDetail = item">
+                                                        <itemTemplate v-for="(item) in getShowedItems" :key="index">
+                                                                <div class="itemBox" :class="{ outStock: item.stock !== undefined && item.stock <= 0 }" @click="this.general.selectedItemDetail = item">
 									<div v-if="item.discount.state" class="itemDiscountBox">
 										<svg width="1.4583vw" height="1.4583vw" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g id="mdi:discount" clip-path="url(#clip0_3604_605)">
@@ -641,7 +641,10 @@
 										</div>
 									</div>
 									<div class="itemName">{{item.label}}</div>
-									<img :src="item.itemImg" alt="" class="itemImg" />
+                                                                        <img :src="item.itemImg" alt="" class="itemImg" />
+                                                                        <div class="itemStock" v-if="item.stock !== undefined">{{item.stock}}</div>
+                                                                        <div class="itemStock" v-if="item.stock !== undefined">{{item.stock}}</div>
+                                                                        <div class="itemStock" v-if="item.stock !== undefined">{{item.stock}}</div>
 									<div class="itemBuyButton">
 										<img src="./img/coinImg.png" alt="" class="itemBuyIcon" />
 										<h2 class="itemBuyButtonText">{{ item.discount.state ? item.discount.newPrice : item.price}} V</h2>
@@ -742,8 +745,8 @@
 							</div>
 						</div>
 						<div class="itemList">
-							<itemTemplate v-for="(item) in getShowedItems" :key="index">
-								<div class="itemBox" @click="this.general.selectedItemDetail = item">
+                                                        <itemTemplate v-for="(item) in getShowedItems" :key="index">
+                                                                <div class="itemBox" :class="{ outStock: item.stock !== undefined && item.stock <= 0 }" @click="this.general.selectedItemDetail = item">
 									<div v-if="item.discount.state" class="itemDiscountBox">
 										<svg width="1.4583vw" height="1.4583vw" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g id="mdi:discount" clip-path="url(#clip0_3604_605)">
@@ -921,8 +924,8 @@
 							</div>
 						</div>
 						<div class="itemList">
-							<itemTemplate v-for="(item) in getShowedItems" :key="index">
-								<div class="itemBox" @click="this.general.selectedItemDetail = item">
+                                                        <itemTemplate v-for="(item) in getShowedItems" :key="index">
+                                                                <div class="itemBox" :class="{ outStock: item.stock !== undefined && item.stock <= 0 }" @click="this.general.selectedItemDetail = item">
 									<div v-if="item.discount.state" class="itemDiscountBox">
 										<svg width="1.4583vw" height="1.4583vw" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g id="mdi:discount" clip-path="url(#clip0_3604_605)">
@@ -955,7 +958,8 @@
 										</div>
 									</div>
 									<div class="itemName house">{{item.label}}</div>
-									<img :src="item.itemImg" alt="" class="itemImg house" />
+                                                                        <img :src="item.itemImg" alt="" class="itemImg house" />
+                                                                        <div class="itemStock" v-if="item.stock !== undefined">{{item.stock}}</div>
 									<div class="itemBuyButton house">
 										<img src="./img/coinImg.png" alt="" class="itemBuyIcon" />
 										<h2 class="itemBuyButtonText house">{{ item.discount.state ? item.discount.newPrice : item.price}} V</h2>
@@ -987,11 +991,12 @@
 							</div>
 						</div>
 						<div class="itemList">
-							<itemTemplate v-for="(item) in getShowedItems" :key="index">
-								<div
-									class="itemBox"
-									@click="[this.customizePopUp.show = true] , [this.customizePopUp.menu = item.itemType] , [this.general.selectedItemDetail = item]"
-								>
+                                                        <itemTemplate v-for="(item) in getShowedItems" :key="index">
+                                                                <div
+                                                                        class="itemBox"
+                                                                        :class="{ outStock: item.stock !== undefined && item.stock <= 0 }"
+                                                                        @click="[this.customizePopUp.show = true] , [this.customizePopUp.menu = item.itemType] , [this.general.selectedItemDetail = item]"
+                                                                >
 									<div v-if="item.discount.state" class="itemDiscountBox">
 										<svg width="1.4583vw" height="1.4583vw" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<g id="mdi:discount" clip-path="url(#clip0_3604_605)">

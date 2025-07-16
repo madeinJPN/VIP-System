@@ -201,10 +201,16 @@ const app = Vue.createApp({
 							: null,
 				};
 				axios.post(`https://${resourceName}/itemBuy`, itemDetail).then((response) => {
-					if (response.data == true) {
-						this.boughtPopUp.show = true;
-						this.charInfo.coin -= price * this.general.basketItemQuantity;
-						this.basketItemQuantity = 1;
+                                        if (response.data == true) {
+                                                this.boughtPopUp.show = true;
+                                                this.charInfo.coin -= price * this.general.basketItemQuantity;
+                                                if (this.general.selectedItemDetail.stock !== undefined) {
+                                                        this.general.selectedItemDetail.stock -= this.general.basketItemQuantity;
+                                                        if (this.general.selectedItemDetail.stock < 0) {
+                                                                this.general.selectedItemDetail.stock = 0;
+                                                        }
+                                                }
+                                                this.basketItemQuantity = 1;
 					} else {
 						this.notifyArea.show = true;
 						this.notifyArea.message = response.data;

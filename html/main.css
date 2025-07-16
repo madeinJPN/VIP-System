@@ -3849,8 +3849,8 @@ input::placeholder {
 }
 
 .notifyArea {
-	min-height: 4rem;
-	max-width: 30%;
+        min-height: 4rem;
+        max-width: 30%;
 	margin: auto;
 	margin-top: 1rem;
 	background: radial-gradient(105.91% 105.91% at 50% 100%, rgb(247 169 53 / 18%) 0%, rgba(0, 0, 0, 0) 100%), rgb(236 237 160 / 15%);
@@ -3863,5 +3863,23 @@ input::placeholder {
 	color: rgb(17, 16, 16);
 	font-family: Barlow;
 	font-size: 1vw;
-	font-weight: 700;
+        font-weight: 700;
+}
+
+.itemStock {
+        position: absolute;
+        top: 0.3vw;
+        right: 0.3vw;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 0.2vw 0.4vw;
+        font-family: Barlow;
+        font-size: 0.833vw;
+        border-radius: 0.208vw;
+        pointer-events: none;
+}
+
+.outStock {
+        opacity: 0.5;
+        pointer-events: none;
 }
