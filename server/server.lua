@@ -26,7 +26,30 @@ RegisterServerCallback('ak4y-vipSystemv2:getPlayerData:server', function(source,
 end)
 
 RegisterServerCallback('ak4y-vipSystemv2:getCategories:server', function(source, cb)
-    cb(Categories)
+    local copy = json.decode(json.encode(Categories))
+    local promList = {}
+
+    for _, cat in pairs(copy) do
+        if cat.items then
+            for _, item in pairs(cat.items) do
+                if item.stock then
+                    local p = promise.new()
+                    GetStock(item.itemType, item.itemName, function(stock)
+                        item.stock = stock
+                        p:resolve()
+                    end)
+                    table.insert(promList, p)
+                end
+            end
+        end
+    end
+
+    CreateThread(function()
+        for _, p in ipairs(promList) do
+            Citizen.Await(p)
+        end
+        cb(copy)
+    end)
 end)
 
 RegisterServerCallback('ak4y-vipSystemv2:buyItem:server', function(source, cb, itemData)
