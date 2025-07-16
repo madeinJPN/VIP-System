@@ -135,7 +135,7 @@ function addWeaponToPlayer(player, weapon, amount)
             player.Functions.AddItem(weapon, 1)
         end
     else
-        player.addWeapon(weapon, ammo)
+        player.addWeapon(weapon, amount)
     end
 end
 

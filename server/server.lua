@@ -326,10 +326,10 @@ function getPlayerAvatar(src)
             Citizen.Await(p)
         end
         local resultAvatar = avatar or "assets/default.png"
-        return avatar
+        return resultAvatar
     else
         return "assets/default.png"
-    end     
+    end
 end
 
 function GetStock(category, itemName, cb)
@@ -374,6 +374,6 @@ function SendToDiscord(name, message, color)
                 },
             },
 	    }
-		PerformHttpRequest(DiscordWebhook, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = connect, avatarrl = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
-	end
+                PerformHttpRequest(DiscordWebhook, function(err, text, headers) end, 'POST', json.encode({username = DISCORD_NAME, embeds = connect, avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+        end
 end
