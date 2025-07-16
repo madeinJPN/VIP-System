@@ -48,13 +48,52 @@ RegisterServerCallback('ak4y-vipSystemv2:buyItem:server', function(source, cb, i
             end
         end
         local result = ExecuteSql("SELECT * FROM ak4y_vipsystemv2 WHERE citizenid = '"..citizenId.."'")
-        if result[1] then 
+        if result[1] then
             if result[1].coinAmount >= totalAmountOfItem then
                 local newCoinAmount = result[1].coinAmount - totalAmountOfItem
+                local vehiclesToReduce = {}
+
+                if itemData.itemType == Settings.SqlVehicleType or
+                itemData.itemType == Settings.SqlAirType or
+                itemData.itemType == Settings.SqlBoatType then
+                    local p = promise.new()
+                    ReduceStock(itemData.itemType, itemData.itemName, function(success)
+                        p:resolve(success)
+                    end)
+                    local success = Citizen.Await(p)
+                    if not success then
+                        cb(AK4Y.Translate.stockEmptyText)
+                        return
+                    end
+                elseif itemData.itemType == "bundle" then
+                    for k,v in pairs(itemData.giveItems) do
+                        if v.itemType == Settings.SqlVehicleType or
+                        v.itemType == Settings.SqlAirType or
+                        v.itemType == Settings.SqlBoatType then
+                            local p1 = promise.new()
+                            GetStock(v.itemType, v.itemName, function(stock)
+                                p1:resolve(stock)
+                            end)
+                            local stock = Citizen.Await(p1)
+                            if stock <= 0 then
+                                cb(AK4Y.Translate.stockEmptyText)
+                                return
+                            end
+                            table.insert(vehiclesToReduce, v)
+                        end
+                    end
+                    for _,veh in ipairs(vehiclesToReduce) do
+                        local p2 = promise.new()
+                        ReduceStock(veh.itemType, veh.itemName, function()
+                            p2:resolve()
+                        end)
+                        Citizen.Await(p2)
+                    end
+                end
                 if itemData.itemName == nil then itemData.itemName = "null" end
-                if itemData.itemType == "item" then 
+                if itemData.itemType == "item" then
                     addItemToPlayer(xPlayer, itemData.itemName, itemData.quantity * itemData.itemCount)
-                elseif itemData.itemType == "money" then 
+                elseif itemData.itemType == "money" then
                     giveServerMoney(xPlayer, itemData.quantity * itemData.itemCount)
                 elseif itemData.itemType == "job" then 
                     setJobToPlayer(xPlayer, itemData.itemName, itemData.jobGrade)
@@ -102,14 +141,18 @@ RegisterServerCallback('ak4y-vipSystemv2:buyItem:server', function(source, cb, i
                 ExecuteSql("UPDATE ak4y_vipsystemv2 SET coinAmount = coinAmount - '"..totalAmountOfItem.."' WHERE citizenid = '"..citizenId.."'")
                 sendNotifyToDc(source, citizenId, itemData.itemName, itemData.quantity, totalAmountOfItem, newCoinAmount)
                 cb(true)
+                return
             else
                 cb(AK4Y.Translate.youDontHaveEnoughCoinText)
+                return
             end
         else
             cb(AK4Y.Translate.youDontHaveEnoughCoinText)
+            return
         end
     else
         cb(AK4Y.Translate.priceHasChangedText)
+        return
     end
     cb(false)
 end)

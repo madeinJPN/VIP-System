@@ -64,5 +64,6 @@ AK4Y.Translate = {
     codeNotFoundText = "Código no encontrado.",
     locationMarked = "Ubicación marcada.",
     plateHasOwnerText = "Esta matrícula ya tiene un propietario.",
+    stockEmptyText = "No queda stock disponible.",
     soFarFromTestDriveArea = "Estás muy lejos del área de prueba.",
 }
