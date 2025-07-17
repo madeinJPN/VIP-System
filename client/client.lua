@@ -1,4 +1,6 @@
 local firstOpening = true
+local menuOpen = false
+local menuCooldown = 0
 
 -- Open Menu Command
 if Settings.openWithCommand then 
@@ -12,11 +14,19 @@ end
 
 -- Open Menu trigger
 RegisterNetEvent('ak4y-vipSystemv2:openMenu', function()
+    if menuOpen or GetGameTimer() < menuCooldown then
+        if Settings.Debug then
+            Settings.DebugPrint("Open menu blocked by spam protection")
+        end
+        return
+    end
     if Settings.Debug then
         Settings.DebugPrint("Opening Menu")
     end
     TriggerServerCallback('ak4y-vipSystemv2:getPlayerData:server', function(data)
         firstOpening = false
+        menuOpen = true
+        menuCooldown = GetGameTimer() + 1000
         SetNuiFocus(true, true)
         SendNUIMessage({
             action = "openMenu",
@@ -61,6 +71,7 @@ end)
 -- Close event from NUI
 RegisterNuiCallback("closeMenu", function(data, cb)
     SetNuiFocus(false, false)
+    menuOpen = false
 
     if Settings.Debug then
         Settings.DebugPrint("Closing Menu")
