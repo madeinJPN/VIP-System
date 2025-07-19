@@ -116,15 +116,15 @@ body {
 }
 
 .titleText {
-	font-family: Barlow;
-	font-size: 1.5625vw;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 90%; /* 27px */
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+        font-family: Barlow;
+        font-size: 1.5625vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90%; /* 27px */
+        background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .titleSubText {
@@ -221,15 +221,15 @@ body {
 }
 
 .selectCategory .categoryText {
-	background: linear-gradient(115deg, #ffd580 17.11%, #fff0d1 70.83%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+        background: linear-gradient(115deg, #FF00C8 17.11%, #00FFF6 70.83%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .selectCategory .categoryLine {
-	height: 0.2117vw;
-	background: #ffbb32;
+        height: 0.2117vw;
+        background: #FF00C8;
 }
 
 .topLine {
@@ -282,22 +282,22 @@ body {
 }
 
 .coinBox {
-	height: 1.1615vw;
-	width: fit-content;
-	display: flex;
-	align-items: center;
-	gap: 0.2084vw;
-	padding-right: 0.1146vw;
-	cursor: pointer;
-	padding-left: 0.3906vw;
-	border-radius: 0.2327vw;
-	background: linear-gradient(237deg, #ffd37e -2.61%, #ccbe9a 97.05%);
-	color: #614200;
-	font-family: Barlow;
-	font-size: 0.7561vw;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 90%; /* 13.065px */
+        height: 1.1615vw;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 0.2084vw;
+        padding-right: 0.1146vw;
+        cursor: pointer;
+        padding-left: 0.3906vw;
+        border-radius: 0.2327vw;
+        background: linear-gradient(237deg, #FF00C8 -2.61%, #00FFF6 97.05%);
+        color: #FF00C8;
+        font-family: Barlow;
+        font-size: 0.7561vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90%; /* 13.065px */
 }
 
 .coinIcon {
@@ -358,28 +358,28 @@ body {
 }
 
 .specialTitleText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-family: Barlow;
-	font-size: 2.0833vw;
-	font-style: normal;
-	font-weight: 800;
-	line-height: 90%; /* 36px */
+        background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Barlow;
+        font-size: 2.0833vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 90%; /* 36px */
 }
 
 .specialTitle {
-	padding: 0vw 1.0417vw;
-	width: fit-content;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 3.4375vw;
-	border-radius: 0.5208vw;
-	border: 0.1042vw solid rgba(255, 255, 255, 0.09);
-	background: linear-gradient(96deg, rgba(255, 213, 128, 0.12) 32.1%, rgba(255, 224, 161, 0.12) 77.1%);
-	backdrop-filter: blur(0.6771vw);
+        padding: 0vw 1.0417vw;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3.4375vw;
+        border-radius: 0.5208vw;
+        border: 0.1042vw solid rgba(255, 255, 255, 0.09);
+        background: linear-gradient(96deg, rgba(255, 0, 200, 0.12) 32.1%, rgba(0, 255, 246, 0.12) 77.1%);
+        backdrop-filter: blur(0.6771vw);
 }
 
 .specialSubText {
@@ -395,15 +395,15 @@ body {
 }
 
 .specialSub {
-	font-family: Barlow;
-	font-size: 1.3596vw;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 90%; /* 23.495px */
-	background: linear-gradient(110deg, #ffedca 32.73%, #8a8a8a 109.7%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+        font-family: Barlow;
+        font-size: 1.3596vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 90%; /* 23.495px */
+        background: linear-gradient(110deg, #FF00C8 32.73%, #00FFF6 109.7%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .specialDescription {
@@ -471,7 +471,7 @@ body {
 }
 
 .specialItemName {
-	color: #ffe8b9;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.1919vw;
 	font-style: normal;
@@ -636,7 +636,7 @@ body {
 }
 
 .needCoinTitleText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -651,7 +651,7 @@ body {
 }
 
 .needCoinTitleText p {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -673,7 +673,7 @@ body {
 	justify-content: center;
 	height: 3.4375vw;
 	border-radius: 0.3646vw;
-	border: 0.1042vw solid #e0cc9d;
+	border: 0.1042vw solid #00FFF6;
 	background: linear-gradient(150deg, rgba(255, 190, 131, 0.35) 11.99%, rgba(217, 157, 88, 0.35) 81.73%);
 	backdrop-filter: blur(0.1042vw);
 }
@@ -696,7 +696,7 @@ body {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 90%; /* 23.495px */
-	background: linear-gradient(110deg, #ffedca 32.73%, #8a8a8a 109.7%);
+	background: linear-gradient(110deg, #FF00C8 32.73%, #8a8a8a 109.7%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -728,7 +728,7 @@ body {
 	object-fit: cover;
 }
 .needCoinText {
-	color: #fff7b5;
+	color: #00FFF6;
 	text-align: center;
 	font-family: Barlow;
 	font-size: 1.3542vw;
@@ -830,7 +830,7 @@ body {
 	font-weight: 800;
 	line-height: 90%; /* 25.2px */
 	text-transform: uppercase;
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -890,7 +890,7 @@ body {
 	width: 15.9896vw;
 	height: 18.8542vw;
 	border-radius: 0.3646vw;
-	border: 0.0521vw solid #f7e988;
+	border: 0.0521vw solid #00FFF6;
 	background: linear-gradient(139deg, rgba(251, 249, 247, 0.26) -3.48%, rgba(135, 114, 73, 0.71) 97.22%);
 	backdrop-filter: blur(0.9635vw);
 }
@@ -906,7 +906,7 @@ body {
 	top: 0;
 	left: 0;
 	border-radius: 0.3646vw 0.3646vw 0px 0px;
-	background: linear-gradient(100deg, rgba(255, 152, 57, 0.7) 37.36%, #ffb039 66.78%);
+	background: linear-gradient(100deg, rgba(255, 152, 57, 0.7) 37.36%, #FF00C8 66.78%);
 	box-shadow: 0px 0.2083vw 2.6563vw 0.4688vw rgba(255, 153, 58, 0.72);
 }
 
@@ -986,7 +986,7 @@ body {
 .dealsDiscountBox i {
 	padding-top: 0.22vw;
 	font-size: 1.4vw;
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -999,7 +999,7 @@ body {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 90%; /* 22.147px */
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1032,7 +1032,7 @@ body {
 	font-weight: 700;
 	line-height: 90%; /* 21px */
 	text-transform: uppercase;
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1117,7 +1117,7 @@ body {
 	width: fit-content;
 	gap: 0.3125vw;
 	border-radius: 0.5055vw;
-	border: 0.0919vw solid #ffbd67;
+	border: 0.0919vw solid #FF00C8;
 }
 
 .specialPriceImg {
@@ -1127,7 +1127,7 @@ body {
 }
 
 .specialPriceText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1424,7 +1424,7 @@ body {
 	font-weight: 700;
 	line-height: 90%; /* 24.781px */
 	text-transform: uppercase;
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1526,7 +1526,7 @@ body {
 	align-items: center;
 	border-radius: 0.6771vw;
 	height: 0.3125vw;
-	background: #ffcb7d;
+	background: #FF00C8;
 }
 
 .previewRangeSay::before {
@@ -1543,7 +1543,7 @@ body {
 	position: absolute;
 	right: 0.625vw;
 	bottom: 0.5129vw;
-	color: #fff4ce;
+	color: #00FFF6;
 	text-align: right;
 	font-family: Barlow;
 	font-size: 0.8333vw;
@@ -1570,7 +1570,7 @@ body {
 	flex: 1;
 	border-radius: 0px 0px 0px 0.3646vw;
 	background: rgba(255, 216, 140, 0.26);
-	color: #ffe3ae;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.2302vw;
 	font-style: normal;
@@ -1600,7 +1600,7 @@ body {
 	height: 100%;
 	border-radius: 0px 0px 0.3646vw 0px;
 	background: rgba(255, 245, 225, 0.26);
-	color: #ffecc8;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.1458vw;
 	font-style: normal;
@@ -1610,7 +1610,7 @@ body {
 }
 
 .previewTestButton i {
-	color: #ffecc8;
+	color: #FF00C8;
 	font-size: 1vw;
 	transition: 250ms ease-in-out;
 }
@@ -1714,7 +1714,7 @@ input {
 }
 
 .inputCheck i {
-	color: #ffee59;
+	color: #FF00C8;
 	font-size: 0.8vw;
 }
 
@@ -1944,7 +1944,7 @@ input::placeholder {
 }
 
 .itemBuyButtonText {
-	color: #ffe3ae;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 0.9569vw;
 	font-style: normal;
@@ -1979,7 +1979,7 @@ input::placeholder {
 
 .itemDiscountBox i {
 	font-size: 1.3vw;
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1997,7 +1997,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 90%; /* 15.941px */
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2052,7 +2052,7 @@ input::placeholder {
 }
 
 .bundleTitleText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2189,7 +2189,7 @@ input::placeholder {
 }
 
 .bundleDiscountText {
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2253,7 +2253,7 @@ input::placeholder {
 	font-weight: 700;
 	line-height: 90%; /* 28.785px */
 	text-transform: uppercase;
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2270,7 +2270,7 @@ input::placeholder {
 	border-radius: 0.3125vw;
 	border: 0.1042vw solid rgba(255, 235, 183, 0.22);
 	background: rgba(255, 235, 183, 0.1);
-	color: #ffebb7;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 0.9375vw;
 	font-style: normal;
@@ -2286,7 +2286,7 @@ input::placeholder {
 
 .bundlePreviewButton i {
 	font-size: 0.9vw;
-	color: #ffebb7;
+	color: #FF00C8;
 }
 
 .coinSide {
@@ -2328,7 +2328,7 @@ input::placeholder {
 }
 
 .reedemTitleText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2369,7 +2369,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 90%; /* 23.495px */
-	background: linear-gradient(110deg, #ffedca 32.73%, #8a8a8a 109.7%);
+	background: linear-gradient(110deg, #FF00C8 32.73%, #8a8a8a 109.7%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2488,7 +2488,7 @@ input::placeholder {
 	height: 2.0833vw;
 	border-radius: 0.3125vw;
 	border: 0.1042vw solid rgba(255, 255, 255, 0.15);
-	background: linear-gradient(97deg, rgba(254, 172, 96, 0.7) 38%, #ffbe5b 67.25%);
+	background: linear-gradient(97deg, rgba(254, 172, 96, 0.7) 38%, #FF00C8 67.25%);
 	color: rgba(0, 0, 0, 0.44);
 	font-family: Barlow;
 	font-size: 1.0417vw;
@@ -2502,7 +2502,7 @@ input::placeholder {
 	cursor: pointer;
 	color: black;
 	border: 0.1042vw solid rgba(255, 255, 255, 0.5);
-	box-shadow: 0px 0px 1.4375vw 0px #f9b75ba4;
+	box-shadow: 0px 0px 1.4375vw 0px #FF00C8a4;
 }
 
 .reedemInfoBox {
@@ -2565,7 +2565,7 @@ input::placeholder {
 }
 
 .coinItemTitleText {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2580,7 +2580,7 @@ input::placeholder {
 }
 
 .coinItemTitleText p {
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2602,7 +2602,7 @@ input::placeholder {
 	justify-content: center;
 	height: 2.6979vw;
 	border-radius: 0.3646vw;
-	border: 0.1042vw solid #e0cc9d;
+	border: 0.1042vw solid #00FFF6;
 	background: linear-gradient(150deg, rgba(255, 190, 131, 0.35) 11.99%, rgba(217, 157, 88, 0.35) 81.73%);
 }
 
@@ -2623,7 +2623,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 90%; /* 23.495px */
-	background: linear-gradient(110deg, #ffedca 32.73%, #8a8a8a 109.7%);
+	background: linear-gradient(110deg, #FF00C8 32.73%, #8a8a8a 109.7%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2651,7 +2651,7 @@ input::placeholder {
 	min-height: 2.5521vw;
 	border-radius: 0px 0px 0.3646vw 0.3646vw;
 	backdrop-filter: blur(0.5208vw);
-	color: #ffda92;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.3542vw;
 	font-style: normal;
@@ -2811,7 +2811,7 @@ input::placeholder {
 }
 
 .bundlePopupTitleIcon i {
-	color: #ffdc94c7;
+	color: #FF00C8c7;
 	font-size: 1.4vw;
 }
 
@@ -2827,7 +2827,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 800;
 	line-height: 90%; /* 29.578px */
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -2986,7 +2986,7 @@ input::placeholder {
 	font-weight: 700;
 	line-height: 90%; /* 28.785px */
 	/* text-transform: uppercase; */
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3002,7 +3002,7 @@ input::placeholder {
 	border-radius: 0.3125vw;
 	border: 0.1042vw solid rgba(255, 235, 183, 0.22);
 	background: rgba(255, 235, 183, 0.1);
-	color: #ffebb7;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.3616vw;
 	font-style: normal;
@@ -3018,7 +3018,7 @@ input::placeholder {
 }
 
 .bundlePopupBuysButton i {
-	color: #ffebb7;
+	color: #FF00C8;
 	font-size: 1.3vw;
 }
 
@@ -3055,7 +3055,7 @@ input::placeholder {
 }
 
 .bundlePopupDiscountText {
-	background: linear-gradient(163deg, #ffe9bd -1.65%, #ffc552 117.13%);
+	background: linear-gradient(163deg, #FF00C8 -1.65%, #FF00C8 117.13%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3154,7 +3154,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 90%; /* 39.6px */
-	background: linear-gradient(129deg, #ffeec1 21.27%, #fee275 92.54%);
+	background: linear-gradient(129deg, #FF00C8 21.27%, #00FFF6 92.54%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3207,7 +3207,7 @@ input::placeholder {
 }
 
 .popupItemCount {
-	color: #ffc552be;
+	color: #FF00C8be;
 	font-family: Barlow;
 	font-size: 1.25vw;
 	font-style: normal;
@@ -3256,7 +3256,7 @@ input::placeholder {
 	height: 3.0938vw;
 	border-radius: 0.2946vw;
 	border: 0.0982vw solid rgba(255, 235, 183, 0.22);
-	background: linear-gradient(180deg, #ffebb7 0%, rgba(255, 235, 183, 0.51) 100%);
+	background: linear-gradient(180deg, #FF00C8 0%, rgba(255, 235, 183, 0.51) 100%);
 	color: #2e2c2c;
 	font-family: Barlow;
 	font-size: 1.2838vw;
@@ -3273,7 +3273,7 @@ input::placeholder {
 
 .popupBuyButton:hover {
 	cursor: pointer;
-	background: linear-gradient(180deg, #ffebb7 0%, rgba(255, 235, 183, 1) 100%);
+	background: linear-gradient(180deg, #FF00C8 0%, rgba(255, 235, 183, 1) 100%);
 }
 
 .boughtSide {
@@ -3331,7 +3331,7 @@ input::placeholder {
 	font-weight: 700;
 	line-height: 90%; /* 44.034px */
 	text-transform: uppercase;
-	background: linear-gradient(96deg, #ffd580 32.1%, #ffe0a1 77.1%);
+	background: linear-gradient(96deg, #FF00C8 32.1%, #00FFF6 77.1%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3427,7 +3427,7 @@ input::placeholder {
 }
 
 .boughtItemPrice {
-	color: #ffe3ae;
+	color: #FF00C8;
 	font-family: Barlow;
 	font-size: 1.0057vw;
 	font-style: normal;
@@ -3579,7 +3579,7 @@ input::placeholder {
 }
 
 .leftphoneImageArea i {
-	color: #ffe89e;
+	color: #FF00C8;
 	padding: 2.3vw;
 	font-size: 3vw;
 }
@@ -3666,7 +3666,7 @@ input::placeholder {
 	font-style: normal;
 	font-weight: 700;
 	line-height: 90%; /* 24.3px */
-	background: linear-gradient(129deg, #ffeec1, #f1c206);
+	background: linear-gradient(129deg, #FF00C8, #00FFF6);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -3710,11 +3710,11 @@ input::placeholder {
 	/* padding: 0.6vw; */
 
 	border: 1.886px solid rgba(255, 235, 183, 0.22);
-	background: linear-gradient(180deg, #ffebb7 0%, rgba(255, 235, 183, 0.51) 100%, rgba(255, 235, 183, 0.51) 100%);
+	background: linear-gradient(180deg, #FF00C8 0%, rgba(255, 235, 183, 0.51) 100%, rgba(255, 235, 183, 0.51) 100%);
 }
 
 #customizeChangeButton:hover {
-	background: linear-gradient(180deg, #ffebb7 0%, rgba(255, 235, 183, 1) 100%);
+	background: linear-gradient(180deg, #FF00C8 0%, rgba(255, 235, 183, 1) 100%);
 }
 
 .itemName.house {
@@ -3817,7 +3817,7 @@ input::placeholder {
 
 .locateButton {
 	width: 35%;
-	color: #ffecc8;
+	color: #FF00C8;
 	text-align: center;
 	font-family: Barlow;
 	font-size: 1vw;
@@ -3854,7 +3854,7 @@ input::placeholder {
 	margin: auto;
 	margin-top: 1rem;
 	background: radial-gradient(105.91% 105.91% at 50% 100%, rgb(247 169 53 / 18%) 0%, rgba(0, 0, 0, 0) 100%), rgb(236 237 160 / 15%);
-	border: 1px solid #a2a38c;
+	border: 1px solid #FF00C8;
 	box-shadow: 0px 0px 35px rgb(61 70 36 / 42%);
 	backdrop-filter: blur(10px);
 	border-radius: 10px;
