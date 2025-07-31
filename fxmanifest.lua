@@ -26,12 +26,13 @@ server_scripts {
 	'config/server_config.lua',
 	'utils/server.lua',
 	'config/admin_commands.lua',
-	'server/server.lua',
+        'server/server.lua',
 
-	"config/categories/vehicleCategory.lua",
-	"config/categories/itemCategory.lua",
-	"config/categories/jobCategory.lua",
-	"config/categories/houseCategory.lua",
+        "config/categories/vehicleCategory.lua",
+        "config/categories/itemCategory.lua",
+        "config/categories/jobCategory.lua",
+        "config/categories/houseCategory.lua",
+        'server/stock_init.lua',
 }
 
 ui_page {
