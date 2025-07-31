@@ -32,7 +32,7 @@ RegisterServerCallback('ak4y-vipSystemv2:getCategories:server', function(source,
     for _, cat in pairs(copy) do
         if cat.items then
             for _, item in pairs(cat.items) do
-                if item.stock then
+                if item.stock ~= nil then
                     local p = promise.new()
                     GetStock(item.itemType, item.itemName, function(stock)
                         item.stock = stock
@@ -74,25 +74,25 @@ RegisterServerCallback('ak4y-vipSystemv2:buyItem:server', function(source, cb, i
         if result[1] then
             if result[1].coinAmount >= totalAmountOfItem then
                 local newCoinAmount = result[1].coinAmount - totalAmountOfItem
-                local vehiclesToReduce = {}
-
-                if itemData.itemType == Settings.SqlVehicleType or
-                itemData.itemType == Settings.SqlAirType or
-                itemData.itemType == Settings.SqlBoatType then
-                    local p = promise.new()
-                    ReduceStock(itemData.itemType, itemData.itemName, function(success)
-                        p:resolve(success)
-                    end)
-                    local success = Citizen.Await(p)
-                    if not success then
-                        cb(AK4Y.Translate.stockEmptyText)
-                        return
+                local itemsToReduce = {}
+                local configItem
+                for _,v in pairs(itemCategory.items) do
+                    if v.id == itemData.id then
+                        configItem = v
+                        break
                     end
-                elseif itemData.itemType == "bundle" then
+                end
+
+                if itemData.itemType ~= "bundle" then
+                    if (configItem and configItem.stock ~= nil) or
+                    itemData.itemType == Settings.SqlVehicleType or
+                    itemData.itemType == Settings.SqlAirType or
+                    itemData.itemType == Settings.SqlBoatType then
+                        table.insert(itemsToReduce, { itemType = itemData.itemType, itemName = itemData.itemName })
+                    end
+                else
                     for k,v in pairs(itemData.giveItems) do
-                        if v.itemType == Settings.SqlVehicleType or
-                        v.itemType == Settings.SqlAirType or
-                        v.itemType == Settings.SqlBoatType then
+                        if v.stock ~= nil or v.itemType == Settings.SqlVehicleType or v.itemType == Settings.SqlAirType or v.itemType == Settings.SqlBoatType then
                             local p1 = promise.new()
                             GetStock(v.itemType, v.itemName, function(stock)
                                 p1:resolve(stock)
@@ -102,15 +102,20 @@ RegisterServerCallback('ak4y-vipSystemv2:buyItem:server', function(source, cb, i
                                 cb(AK4Y.Translate.stockEmptyText)
                                 return
                             end
-                            table.insert(vehiclesToReduce, v)
+                            table.insert(itemsToReduce, v)
                         end
                     end
-                    for _,veh in ipairs(vehiclesToReduce) do
-                        local p2 = promise.new()
-                        ReduceStock(veh.itemType, veh.itemName, function()
-                            p2:resolve()
-                        end)
-                        Citizen.Await(p2)
+                end
+
+                for _,it in ipairs(itemsToReduce) do
+                    local p2 = promise.new()
+                    ReduceStock(it.itemType, it.itemName, function(success)
+                        p2:resolve(success)
+                    end)
+                    local success = Citizen.Await(p2)
+                    if not success then
+                        cb(AK4Y.Translate.stockEmptyText)
+                        return
                     end
                 end
                 if itemData.itemName == nil then itemData.itemName = "null" end

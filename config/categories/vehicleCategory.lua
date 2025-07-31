@@ -1064,26 +1064,4 @@ if Settings.Debug then
     Settings.DebugPrint("Vehicle Category Preloaded", json.encode(preCategory))
 end
 
--- Recorre los ítems y los registra solo si no existen
-for _, item in ipairs(preCategory.items) do
-    local category = preCategory.categoryType
-    local itemName = item.itemName
-
-    if item.stock then
-        -- Verifica si ya existe stock en base de datos
-        exports.oxmysql:fetch("SELECT 1 FROM vehicle_stock WHERE category = ? AND item_name = ?", {
-            category, itemName
-        }, function(result)
-            if not result[1] then
-                -- Si no existe, lo crea con SetStock
-                SetStock(category, itemName, item.stock)
-                print("[STOCK] Nuevo ítem insertado:", category, itemName, "=>", item.stock)
-            else
-                print("[STOCK] Ya existe:", category, itemName)
-            end
-        end)
-    end
-end
-
-
 table.insert(Categories, preCategory)
