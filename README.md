@@ -2,7 +2,7 @@
 
 ## SQL
 
-The script uses a table named `vehicle_stock` to store remaining stock for vehicles. `server/server.lua` references this table when updating or checking stock levels. Add the table by running the SQL below or executing `ak4y-vipSystemv2.sql`.
+The script uses a table named `vehicle_stock` to store remaining stock for any item category. `server/server.lua` references this table when updating or checking stock levels. Add the table by running the SQL below or executing `ak4y-vipSystemv2.sql`.
 
 ```sql
 CREATE TABLE IF NOT EXISTS vehicle_stock (

@@ -127,10 +127,12 @@ RegisterNetEvent('ak4y-vipSystemv2:houseBought', function(data)
     if Settings.Debug then
         Settings.DebugPrint("House Bought")
     end
-    if data.afterPurchaseTrigger.clientOrServer == "server" then 
-        TriggerServerEvent(data.afterPurchaseTrigger.trigger, data.afterPurchaseTrigger.parameters)
-    else
-        TriggerEvent(data.afterPurchaseTrigger.trigger, data.afterPurchaseTrigger.parameters)
+    if data.afterPurchaseTrigger then
+        if data.afterPurchaseTrigger.clientOrServer == "server" then
+            TriggerServerEvent(data.afterPurchaseTrigger.trigger, data.afterPurchaseTrigger.parameters)
+        else
+            TriggerEvent(data.afterPurchaseTrigger.trigger, data.afterPurchaseTrigger.parameters)
+        end
     end
 end)
 

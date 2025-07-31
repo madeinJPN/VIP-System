@@ -6,6 +6,7 @@ local preCategory = {
         {
             id = 1,
             label = "House (1)",
+            itemName = "1",
             itemType = "house",
             price = 1000,
             filter = "Luxury",
@@ -13,13 +14,6 @@ local preCategory = {
             houseInfoText = "510m2",
             description = "This is a description for house 1",
             coords = {x = 1342.72, y = -596.97, z = 74.5},
-            afterPurchaseTrigger = {
-                clientOrServer = "server",
-                trigger = "yourhouse:buy:event",
-                parameters = {
-                    id = "1",
-                },
-            },
             discount = {
                 state = true,
                 newPrice = 500,
